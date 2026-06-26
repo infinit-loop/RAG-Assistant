@@ -31,7 +31,7 @@ TYPE_BADGE = {
     "blocked": ("🛡️", "Blocked by guardrail"),
 }
 
-st.set_page_config(page_title="RAG Assistant", page_icon="📚")
+st.set_page_config(page_title="Document Assistant", page_icon="📚")
 st.title("📚 Document Assistant")
 
 # Stable per-browser-session id (used to isolate uploads server-side).
