@@ -16,14 +16,24 @@ even offline.
 
 ## Setup
 
-### With Docker (recommended)
+### 1. Create your `.env`
+Copy the example file and fill in your values (at minimum, the key for the LLM
+provider you want to use — see "Choosing an LLM" below):
+```bash
+cp .env.example .env
+```
+`docker compose` reads this `.env` automatically, and it's gitignored so your
+keys never get committed. You can skip the keys entirely to run in extractive
+mode (offline, no LLM).
+
+### 2. With Docker (recommended)
 ```bash
 docker compose up --build
 ```
 - API + Swagger UI → http://localhost:8000/docs
 - Streamlit chat UI → http://localhost:8501
 
-### Locally
+### 3. Locally (alternative to Docker)
 ```bash
 pip install -r requirements.txt
 # The base corpus lives in docs/base_corpus; docs/examples holds sample files
