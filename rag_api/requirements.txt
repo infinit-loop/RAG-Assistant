@@ -1,0 +1,12 @@
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+pydantic==2.10.4
+pandas==2.2.3
+scikit-learn==1.6.0
+faiss-cpu==1.9.0
+numpy==1.26.4
+requests==2.32.3
+streamlit==1.41.1
+langgraph==0.2.60
+langchain-core==0.3.29
+PyYAML==6.0.2
