@@ -1,0 +1,25 @@
+From: john.doe@company.example
+To: regional-logistics@company.example
+Subject: Q1 Returns Process Reminder
+Date: 2026-02-10
+
+Hi team,
+
+A quick reminder on the customer returns process as we head into Q1 peak.
+
+When a customer requests a return, log it in the Returns Module within the same
+business day. Returns under $500 can be approved by any team lead. Returns
+between $500 and $2,000 need Regional Manager approval. Anything above $2,000
+must go to the Finance Controller.
+
+Refunds are only issued after the returned item is received and inspected at
+the warehouse. Inspection must be completed within 3 business days of receipt.
+Do not promise refund timelines to customers beyond "7-10 business days after
+we receive the item."
+
+Damaged-on-arrival items follow a separate fast-track: photo evidence plus a
+team lead sign-off is enough to trigger an immediate replacement.
+
+Thanks,
+John Doe
+Customer Operations Lead

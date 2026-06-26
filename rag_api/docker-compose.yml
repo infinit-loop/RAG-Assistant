@@ -1,0 +1,39 @@
+# One Dockerfile, two services. Each service builds the same image (build: .)
+# and overrides the start command.
+#   API / Swagger : http://localhost:8000/docs
+#   Streamlit UI  : http://localhost:8501
+# Variables are loaded from the .env file in this folder (see .env.example).
+#
+# The named volume `uploads` persists user-uploaded documents across restarts.
+services:
+  api:
+    build: .
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    environment:
+      DOCS_DIR: /app/docs/base_corpus
+      UPLOAD_DIR: /app/uploads
+    volumes:
+      - ./docs:/app/docs:ro            # base_corpus (indexed) + examples (upload samples)
+      - uploads:/app/uploads          # persisted uploaded documents
+    restart: unless-stopped
+
+  ui:
+    build: .
+    command: streamlit run ui/streamlit_app.py --server.address 0.0.0.0 --server.port 8501
+    ports:
+      - "8501:8501"
+    env_file:
+      - .env
+    environment:
+      # UI reaches the API by its compose service name, not localhost.
+      API_URL: http://api:8000
+    depends_on:
+      - api
+    restart: unless-stopped
+
+volumes:
+  uploads:
