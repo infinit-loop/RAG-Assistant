@@ -1,4 +1,4 @@
-# RAG Assistant
+# Document Assistant
 
 A small but complete document assistant that answers questions **grounded in the
 documents you give it** — and is honest when it can't. It does plain document
